@@ -89,7 +89,7 @@ Joblib
 """
 def get_primes_joblib(end, n_workers):
     start_ends = return_start_end_points(end, n_workers)
-    primes = Parallel(n_jobs=n_workers)(
+    primes = Parallel(n_jobs=n_workers, )(
         delayed(get_prime_numbers)(limit) for limit in list(start_ends)
     )
     return list(it.chain.from_iterable(primes))

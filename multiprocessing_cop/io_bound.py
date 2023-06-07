@@ -42,7 +42,7 @@ def download_site_threads(url):
 
 def download_multiple_threads(site_list):
     with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
-        executor.map(download_site_threads, site_list)
+        thread = executor.submit(download_site_threads, site_list)
 
 
 """
