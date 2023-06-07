@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "multiprocessing-cop"
+version = "0.1.0"
+description = "Scripts to demonstrate multiprocessing and joblib"
+authors = ["Andrew Patterson <andrew.patterson@riverlane.com>"]
+readme = "README.md"
+packages = [{include = "multiprocessing_cop"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+requests = "^2.31.0"
+joblib = "^1.2.0"
+numpy = "^1.24.3"
+black = "^23.3.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
