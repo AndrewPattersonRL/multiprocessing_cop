@@ -8,6 +8,9 @@ from joblib import Parallel, delayed
 from cpu_bound import return_start_end_points, print_results
 
 
+"""
+Getting the primes
+"""
 def get_primes_limit(limit):
     begin, end = limit
     primes = []
@@ -30,6 +33,9 @@ def get_prime_numbers_shared(limit, shared_primes):
     shared_primes.put(primes)
 
 
+"""
+Multiprocessing
+"""
 def get_primes_multiprocessing_shared(end, n_workers):
     start_ends = return_start_end_points(end, n_workers)
 
